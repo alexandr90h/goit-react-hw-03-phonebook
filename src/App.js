@@ -29,6 +29,10 @@ class App extends Component{
     }))
   }
   componentDidMount() {
+    console.log(localStorage.getItem('contacts'))
+    if (localStorage.getItem('contacts')===null) {
+      localStorage.setItem('contacts',JSON.stringify(this.state.contacts))
+    }
     const cont = localStorage.getItem('contacts');
     const parsCont = JSON.parse(cont);
     this.setState({contacts:parsCont})

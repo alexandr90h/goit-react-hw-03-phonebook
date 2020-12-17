@@ -13,8 +13,7 @@ export default function ContactsListItem({ id, name, number, onBtnDelId }) {
     )
 }
 ContactsListItem.propTypes = {
-//   id: PropTypes.number,
-//   name: PropTypes.string.isRequired,
-//     number: PropTypes.number.isRequired,
-  onBtnDelId:PropTypes.func,
+  id: PropTypes.string,
+  name: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
 };
