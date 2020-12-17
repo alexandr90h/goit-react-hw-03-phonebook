@@ -1,4 +1,4 @@
-import ContactsItem from '../contactsList/contactsItem';
+import ContactsItem from '../ContactsList/contactsItem';
 export default function FilterContactsList({ stateData, changeFilter,onBtnDelId }) {
     const filterArr = stateData.filter(obj=>{return (obj.name.toLowerCase().includes(changeFilter.toLowerCase()))}); 
     return (

@@ -1,5 +1,7 @@
 import styles from './contactsItem.module.scss';
-export default function ContactsList({ id, name, number, onBtnDelId }) {
+import PropTypes from 'prop-types';
+
+export default function ContactsListItem({ id, name, number, onBtnDelId }) {
     return (
         <li key={id} className={styles.contactItem}>
             <div className={styles.contentItem}>
@@ -10,3 +12,9 @@ export default function ContactsList({ id, name, number, onBtnDelId }) {
         </li>
     )
 }
+ContactsListItem.propTypes = {
+//   id: PropTypes.number,
+//   name: PropTypes.string.isRequired,
+//     number: PropTypes.number.isRequired,
+  onBtnDelId:PropTypes.func,
+};
